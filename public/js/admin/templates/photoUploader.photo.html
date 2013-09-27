@@ -1,0 +1,11 @@
+<div class="photo">
+	<div class="options">
+		<% if(options.multiple) { %>
+		<a href="#" class="remove button tiny">Enlever</a>
+		<% } else { %>
+		<a href="#" class="remove button tiny">Enlever cette image</a>
+		<% } %>
+	</div>
+	<img src="<%= photoURL %>" />
+	<input type="hidden" name="<%= options.inputName %>" />
+</div>

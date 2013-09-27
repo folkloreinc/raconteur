@@ -1,0 +1,114 @@
+/*
+ *
+ * Picture upload
+ *
+ */
+.photoUploader {
+	position:relative;
+
+	.photos {
+		background:#eee;
+
+		.photo {
+			position:relative;
+			width:100%;
+			height:auto;
+			text-align:center;
+
+			img {
+				position:relative;
+				z-index:1;
+			}
+
+			.options {
+				text-align:right;
+				position:absolute;
+				top:0px;
+				left:0px;
+				width:100%;
+				padding:5px;
+				background: rgba(0,0,0,0.5);
+				z-index:2;
+
+				a.button {
+					margin:0;
+				}
+			}
+		}
+
+		&.qq-upload-drop-area-active {
+			background:#99FF99;
+		}
+	}
+
+	.actions {
+
+		background:#ddd;
+		padding:10px;
+
+		.removeButton {
+			margin-bottom:0px;
+			text-transform:uppercase;
+		}
+
+		.uploadButton {
+
+			display:inline-block;
+
+			.qq-uploader {
+
+				.qq-upload-button {
+					@extend .button;
+					@extend .small;
+					margin:0;
+					width:225px;
+					text-align:center;
+					text-transform:uppercase;
+				}
+			}
+		}
+
+		.file {
+			margin-top:10px;
+
+			ul,li {
+				list-style:none;
+				margin:0;
+				padding:0;
+			}
+
+			.qq-upload-file {
+				font-size:12px;
+				font-weight:bold;
+			}
+		}
+	}
+
+	&.multiple {
+		.photos {
+			background:#eee;
+
+			.photo {
+				display:inline-block;
+				position:relative;
+				width:100px;
+				height:100px;
+				margin:5px;
+
+				img {
+					width:100px;
+					height:100px;
+					cursor:move;
+				}
+
+				.options {
+					cursor:move;
+				}
+			}
+
+			&.qq-upload-drop-area-active {
+				background:#99FF99;
+			}
+		}
+	}
+}
